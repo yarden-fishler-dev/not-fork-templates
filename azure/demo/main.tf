@@ -58,6 +58,8 @@ resource "azurerm_app_service" "dockerapp" {
   identity {
     type = "SystemAssigned"
   }
+
+  client_cert_enabled = true
 }
 
 # Outputs 
