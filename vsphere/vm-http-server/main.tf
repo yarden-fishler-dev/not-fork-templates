@@ -7,6 +7,15 @@ provider "vsphere" {
   allow_unverified_ssl = true
 }
 
+terraform {
+  required_providers {
+    vsphere = {
+      source  = "hashicorp/vsphere"
+      version = "~> 2.0"
+    }
+  }
+}
+
 resource "vsphere_virtual_machine" "vm" {
   name             = var.vm_name
   resource_pool_id = data.vsphere_resource_pool.pool.id
