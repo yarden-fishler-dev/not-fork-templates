@@ -3,7 +3,7 @@ terraform {
 }
 
 module "remote_state_bucket" {
-  source = "github.com/env0/remote-state-bucket-module/aws"
+  source = "github.com/env0/remote-state-bucket-module/aws?ref=v1.0.0"
   
   # Module-specific inputs
   external_id        = "64922d09-2a1f-4f5b-b978-4f5e18f5e3b6"
